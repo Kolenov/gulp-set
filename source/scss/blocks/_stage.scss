@@ -1,0 +1,42 @@
+.stage {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  transition: background-position 100ms linear;
+  background-repeat: repeat;
+  background-size: contain;
+  will-change: auto;
+
+  &--1 {
+    background-image: url(../img/parallax/stage-1.png);
+  }
+
+  &--2 {
+    background-image: url(../img/parallax/stage-2.png);
+  }
+
+  &--3 {
+    background-image: url(../img/parallax/stage-3.png);
+  }
+
+  &--4 {
+    background-image: url(../img/parallax/stage-4.png);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .stage {
+    &--2,
+    &--4 {
+      display: none;
+    }
+
+    &--3 {
+      background-size: 200%;
+    }
+  }
+}

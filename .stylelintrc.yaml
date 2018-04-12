@@ -1,0 +1,38 @@
+extends:
+  - stylelint-config-sass-guidelines
+  - stylelint-config-property-sort-order-smacss
+ignoreFiles:
+  - node_modules/**/*
+  - packages/**/node_modules/**/*
+  - build/**/*
+plugins:
+  - stylelint-selector-bem-pattern
+  - stylelint-declaration-block-no-ignored-properties
+  - stylelint-order
+rules:
+  order/properties-alphabetical-order: null
+
+  # There is no reason that a specific ID would be needed for UI components
+  selector-max-id: 0
+
+  # Qualifying types are not needed when using a naming system like BEM
+  selector-no-qualifying-type: true
+
+  # Styles for components should never need the universal selector.
+  selector-max-universal: 1
+
+  selector-class-pattern:
+    - ^[a-z0-9\-\__\--]+
+    - resolveNestedSelectors: true
+
+  # We use Harry Roberts' BEM dialect as our preferred way to format classes.
+  # See: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+  # See: https://github.com/postcss/postcss-bem-linter/blob/c59db3f/lib/preset-patterns.js#L39
+  plugin/selector-bem-pattern:
+    componentName: ^[a-z]+(?:-[a-z]+)*$
+
+    # <namespace>-<block>__<element>*--<modifier>*[<attribute>]*
+    componentSelectors: ^\.[a-z\-]?{componentName}(?:__[a-z]+(?:-[a-z]+)*)*(?:--[a-z]+(?:-[a-z]+)*)*(?:\[.+\])*$
+    ignoreSelectors:
+      - ^fieldset
+      - ^\[aria\-disabled=(?:.+)\]

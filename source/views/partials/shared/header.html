@@ -1,0 +1,16 @@
+<h1 class="header__title">Ask MUMM</h1>
+<!-- begin header__branding -->
+  <a href="{{root}}index.html" rel="home" class="header__branding">
+    <img src="assets/img/logo.png"
+         srcset="assets/img/logo@2x.png 2x"
+    class="header__logo">
+  </a>
+<!-- end header__branding -->
+
+<!-- begin header__nav -->
+<nav class="header__nav nav">
+  <a href="{{root}}about.html" class="link nav__item {{#ifpage 'about'}}is-active{{/ifpage}}" >About</a>
+  <a href="{{root}}faq.html" class="link nav__item {{#ifpage 'faq'}}is-active{{/ifpage}}">FAQ</a>
+  <a href="{{root}}contact.html" class="link nav__item {{#ifpage 'contact'}}is-active{{/ifpage}}">Contact</a>
+</nav>
+<!-- end header__nav -->

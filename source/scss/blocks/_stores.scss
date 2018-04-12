@@ -1,0 +1,36 @@
+@import '../variables';
+
+.stores {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-top: 0;
+    color: $c-white;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__badges {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__badge-item {
+    display: inline-block;
+    width: 100%;
+    max-width: 164px;
+    height: auto;
+  }
+
+  &__link {
+    flex-basis: auto;
+    font-size: 0;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}

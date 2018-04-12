@@ -1,0 +1,15 @@
+@import '../variables';
+
+.nav {
+  &__item {
+    box-sizing: border-box;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      border-bottom-color: currentColor;
+    }
+  }
+}

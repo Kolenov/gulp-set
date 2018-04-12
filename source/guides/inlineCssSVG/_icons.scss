@@ -1,0 +1,45 @@
+@function encodecolor($string) {
+  @if type-of($string) == 'color' {
+    $hex: str-slice(ie-hex-str($string), 4);
+    $string: unquote("#{$hex}");
+  }
+  $string: '%23' + $string;
+  @return $string;
+}
+
+.icon-facebook {
+  $color: encodecolor(#000);
+  transform: translate3d(0, 0, 0);
+  background-image: url('icons.svg#icon-facebook');
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: (42/42)*1em (42/10)*1rem;
+}
+
+@mixin icon-facebook($color: #000) {
+  $color: encodecolor($color);
+  transform: translate3d(0, 0, 0);
+  background-image: url('icons.svg#icon-facebook');
+  background-repeat: no-repeat;
+  background-size: (42/42)*1em (42/10)*1rem;
+}
+
+.icon-twitter {
+  $color: encodecolor(#000);
+  transform: translate3d(0, 0, 0);
+  background-image: url('icons.svg#icon-twitter');
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: (42/42)*1em (42/10)*1rem;
+}
+
+@mixin icon-twitter($color: #000) {
+  $color: encodecolor($color);
+  transform: translate3d(0, 0, 0);
+  background-image: url('icons.svg#icon-twitter');
+  background-repeat: no-repeat;
+  background-size: (42/42)*1em (42/10)*1rem;
+}
+
+
+

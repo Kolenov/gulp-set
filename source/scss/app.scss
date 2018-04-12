@@ -1,0 +1,23 @@
+@import 'normalize';
+@import 'typography';
+
+// Inlined svg icons
+@import 'icons/**/*';
+// Layouts
+@import 'layouts/l-global';
+@import 'layouts/l-faq';
+@import 'layouts/l-landing';
+@import 'layouts/l-privacy';
+@import 'layouts/l-terms';
+@import 'layouts/l-about';
+//Blocks
+@import 'blocks/link';
+@import 'blocks/nav';
+@import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/faq';
+@import 'blocks/contacts';
+@import 'blocks/stores';
+@import 'blocks/card';
+@import 'blocks/stage';
+@import 'blocks/video';

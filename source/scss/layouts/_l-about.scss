@@ -1,0 +1,18 @@
+.l-about {
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .l-about {
+    &__section {
+      min-height: 40vh;
+    }
+  }
+}

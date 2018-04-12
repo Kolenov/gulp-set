@@ -1,0 +1,54 @@
+.l-faq {
+  max-width: 754px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-top: 8px;
+    color: $c-pink;
+    font-size: calc(30px + 1.6vw);
+    font-weight: 300;
+  }
+
+  &__topic {
+    padding-bottom: 12px;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid rgba(255, 255, 255, .2);
+    }
+  }
+
+  &__title {
+    margin-bottom: 1em;
+    font-size: calc(16px + 1.6vw);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .l-faq {
+    padding-right: 0;
+    padding-left: 0;
+
+    &__header {
+      margin-bottom: .75em;
+      padding-top: 1em;
+      font-size: 48px;
+    }
+
+    &__topic {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+    }
+
+    &__title {
+      margin-bottom: .5em;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+  }
+}

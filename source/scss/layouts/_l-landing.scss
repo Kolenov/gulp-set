@@ -1,0 +1,71 @@
+.l-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__header {
+    margin-bottom: 50px;
+    text-align: center;
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__stores {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    align-items: center;
+    width: auto;
+  }
+
+  &__picture {
+    margin-right: 24px;
+    margin-bottom: 46px;
+  }
+
+  &__iphones {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__logo {
+    display: block;
+    width: 252px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and(min-width: 769px) {
+  .l-landing {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__header {
+      display: none;
+
+      &--desktop {
+        display: block;
+        margin-bottom: 90px;
+      }
+    }
+
+    &__stores {
+      margin-top: 105px;
+    }
+
+    &__picture {
+      flex-basis: 516px;
+    }
+
+    &__logo {
+      width: 335px;
+    }
+  }
+}
