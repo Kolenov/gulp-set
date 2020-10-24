@@ -12,7 +12,6 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/kolenov/askmumm#readme",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.0.1",
